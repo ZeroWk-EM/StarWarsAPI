@@ -1,0 +1,24 @@
+{
+  "name": "starwarsapi",
+  "version": "1.0.0",
+  "description": "A RESTful API for Starwars DB",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "keywords": [
+    "api",
+    "node",
+    "starwars"
+  ],
+  "author": "Emanuele Moncada",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^6.9.0",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.20"
+  }
+}

@@ -33,7 +33,7 @@ app.use(bodyParser.json());
         return res.status(200).json({});
     }
 }); */
-
+j
 //Entrypoint
 app.use('/characters', charactersRoutes)
 

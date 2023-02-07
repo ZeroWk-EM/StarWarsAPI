@@ -7,7 +7,18 @@ const bodyParser = require('body-parser');
 
 
 // Stringe che contengono gli URL dei Middlware 
-const charactersRoutes = require('./api/routes/character');
+const characterRoutes = require('./api/routes/character');
+const creatureRoutes = require('./api/routes/creature');
+const droidRoutes = require('./api/routes/droid');
+const filmRoutes = require('./api/routes/film');
+const locationRoutes = require('./api/routes/location');
+const organizationRoutes = require('./api/routes/organization');
+const planetRoutes = require('./api/routes/planet');
+const seriesRoutes = require('./api/routes/series');
+const speciesRoutes = require('./api/routes/species');
+const starshipRoutes = require('./api/routes/starship');
+const vehicleRoutes = require('./api/routes/vehicle');
+const weaponsRoutes = require('./api/routes/weapons');
 
 //Connessione al DB di Mongo
 mongoose.set('strictQuery', false);
@@ -26,11 +37,23 @@ connection.on('error', function(err) {
 
 // Middleware per registrare le richieste HTTP effettuate al server
 app.use(morgan('dev'));
+
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 // Middleware per accadere agli URL
-app.use('/characters', charactersRoutes)
+app.use('/character', characterRoutes);
+app.use('/creature', creatureRoutes);
+app.use('/droid', droidRoutes);
+app.use('/film', filmRoutes);
+app.use('/location', locationRoutes);
+app.use('/organization', organizationRoutes);
+app.use('/planet', planetRoutes);
+app.use('/series', seriesRoutes);
+app.use('/species', speciesRoutes);
+app.use('/starship', starshipRoutes);
+app.use('/vehicle', vehicleRoutes);
+app.use('/weapons', weaponsRoutes);
 
 //Porta
 const port = process.env.PORT || 3000;

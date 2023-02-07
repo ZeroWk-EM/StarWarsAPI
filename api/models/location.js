@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const locationSchema = mongoose.Schema({
-    //CODE
+    _id: mongoose.Schema.Types.ObjectId,
 });
 
 module.exports = mongoose.model('location', locationSchema);

@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const starshipSchema = mongoose.Schema({
-    //CODE
+    _id: mongoose.Schema.Types.ObjectId,
 });
 
 module.exports = mongoose.model('starship', starshipSchema);

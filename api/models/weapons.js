@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const weaponsSchema = mongoose.Schema({
-    //CODE
+    _id: mongoose.Schema.Types.ObjectId,
 });
 
 module.exports = mongoose.model('weapons', weaponsSchema);

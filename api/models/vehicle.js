@@ -4,4 +4,4 @@ const vehicleSchema = mongoose.Schema({
     //CODE
 });
 
-module.exports = mongoose.model('Vehicle', vehicleSchema);
+module.exports = mongoose.model('vehicle', vehicleSchema);

@@ -4,4 +4,4 @@ const characterSchema = mongoose.Schema({
     //CODE
 });
 
-module.exports = mongoose.model('Character', characterSchema);
+module.exports = mongoose.model('character', characterSchema);

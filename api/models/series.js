@@ -4,4 +4,4 @@ const seriesSchema = mongoose.Schema({
     //CODE
 });
 
-module.exports = mongoose.model('Series', seriesSchema);
+module.exports = mongoose.model('series', seriesSchema);

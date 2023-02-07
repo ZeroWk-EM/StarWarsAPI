@@ -4,4 +4,4 @@ const droidSchema = mongoose.Schema({
     //CODE
 });
 
-module.exports = mongoose.model('Droid', droidSchema);
+module.exports = mongoose.model('droid', droidSchema);

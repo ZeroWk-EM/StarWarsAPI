@@ -4,4 +4,4 @@ const creatureSchema = mongoose.Schema({
     //CODE
 });
 
-module.exports = mongoose.model('Creature', creatureSchema);
+module.exports = mongoose.model('creature', creatureSchema);

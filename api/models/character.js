@@ -20,7 +20,7 @@ const characterSchema = mongoose.Schema({
     organization: { type: [String], index: true },
     homeworld: { type: String, required: true },
     films: { type: [String], index: true },
-    series: { tyoe: [String], index: true },
+    series: { type: [String], index: true },
     starships: { type: [String], index: true },
     vehicles: { type: [String], index: true },
     weapons: { type: [String], index: true }

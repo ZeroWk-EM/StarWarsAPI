@@ -17,13 +17,13 @@ const characterSchema = mongoose.Schema({
     height: { type: Number, required: true },
     weight: { type: Number, required: true },
     skin_color: { type: String, required: true },
-    organization: { type: [String], index: true },
+    organization: { type: [String] },
     homeworld: { type: String, required: true },
-    films: { type: [String], index: true },
-    series: { type: [String], index: true },
-    starships: { type: [String], index: true },
-    vehicles: { type: [String], index: true },
-    weapons: { type: [String], index: true }
+    films: { type: [String] },
+    series: { type: [String] },
+    starships: { type: [String] },
+    vehicles: { type: [String] },
+    weapons: { type: [String] }
 });
 
-module.exports = mongoose.model('character', characterSchema);
+module.exports = mongoose.model('characters', characterSchema);

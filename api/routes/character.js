@@ -8,7 +8,7 @@ const Character = require("../models/character");
 
 router.get("/",async (req, res) => {
     try {
-        const result = await Character.find({},{name:1})
+        const result = await Character.find()
         res.send(result)
     } catch (error) {
         console.log(error.message);

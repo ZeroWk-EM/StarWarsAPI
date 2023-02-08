@@ -5,21 +5,6 @@ const mongoose = require('mongoose');
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
 
-
-// Stringe che contengono gli URL dei Middlware 
-const characterRoutes = require('./api/routes/character');
-/* const creatureRoutes = require('./api/routes/creature');
-const droidRoutes = require('./api/routes/droid');
-const filmRoutes = require('./api/routes/film');
-const locationRoutes = require('./api/routes/location');
-const organizationRoutes = require('./api/routes/organization');
-const planetRoutes = require('./api/routes/planet');
-const seriesRoutes = require('./api/routes/series');
-const speciesRoutes = require('./api/routes/species');
-const starshipRoutes = require('./api/routes/starship');
-const vehicleRoutes = require('./api/routes/vehicle');
-const weaponsRoutes = require('./api/routes/weapons'); */
-
 //Connessione al DB di Mongo
 mongoose.set('strictQuery', false);
 const stringConnection = 'mongodb://127.0.0.1:27017/starwars';
@@ -35,6 +20,20 @@ connection.on('error', function(err) {
 });
 
 
+// Stringe che contengono gli URL dei Middlware 
+const characterRoutes = require('./api/routes/character');
+const creatureRoutes = require('./api/routes/creature');
+/*const droidRoutes = require('./api/routes/droid');
+const filmRoutes = require('./api/routes/film');
+const locationRoutes = require('./api/routes/location');
+const organizationRoutes = require('./api/routes/organization');
+const planetRoutes = require('./api/routes/planet');
+const seriesRoutes = require('./api/routes/series');
+const speciesRoutes = require('./api/routes/species');
+const starshipRoutes = require('./api/routes/starship');
+const vehicleRoutes = require('./api/routes/vehicle');
+const weaponsRoutes = require('./api/routes/weapons'); */
+
 // Middleware per registrare le richieste HTTP effettuate al server
 app.use(morgan('dev'));
 
@@ -43,8 +42,8 @@ app.use(bodyParser.json());
 
 // Middleware per accadere agli URL
 app.use('/character', characterRoutes);
-/* app.use('/creature', creatureRoutes);
-app.use('/droid', droidRoutes);
+app.use('/creature', creatureRoutes);
+/* app.use('/droid', droidRoutes);
 app.use('/film', filmRoutes);
 app.use('/location', locationRoutes);
 app.use('/organization', organizationRoutes);

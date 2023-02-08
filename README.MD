@@ -1,4 +1,3 @@
-// README.md
 # STAR WARS API
 ### Introduction
 RESTful API for managing a NOSQL(MongoDB) database concerning the **Star Wars** universe
